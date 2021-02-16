@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Return Zero</title>
+
+
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "css/base.css" %}">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Return Zero</a>
+        </div>
+        <form class="navbar-form navbar-left" action="/action_page.php">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        {% if user.is_authenticated %}
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{% url 'signout' %}"><span class="glyphicon glyphicon-user"></span>Sign Out</a></li>
+          <li><a href="{% url 'userprofile' %}"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
+        </ul>
+        {% else %}
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{% url 'signup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="{% url 'signin' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+       {% endif %}
+      </div>
+    </nav>
+    {% block bodyblock %}
+    {% endblock %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

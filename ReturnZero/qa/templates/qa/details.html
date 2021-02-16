@@ -1,0 +1,23 @@
+{% extends "./base.html" %}
+  {% block bodyblock %}
+    {% if question %}
+
+      <h1 id="question">{{ question.question_name }}</h1>
+      <h6 id="author">by {{ question.asked_by.name }}</h6>
+      {% if user.is_authenticated %}
+      <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="answer" placeholder="Enter your Answer Here">
+        <button type="submit">Submit</button>
+      </form>
+      {% endif %}
+      <h2>Answers</h2>
+
+        {% for answer in question.answer_ques.all %}
+          <div class="container jumbotron">
+            <h4>{{ answer.answer }}</h4>
+          </div>
+        {% endfor %}
+
+    {% endif %}
+  {% endblock %}

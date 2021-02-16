@@ -1,0 +1,62 @@
+body {
+    background-color: gainsboro !important;
+  }
+
+
+#question{
+
+  text-align: center;
+  color:black;
+  text-shadow: 1px 2px black;
+
+}
+
+#author{
+
+  margin-left: 64%;
+  top:14%;
+
+}
+
+h2{
+  text-align: center;
+  font-family: fantasy;
+  text-shadow: 0.5px 1px blue;
+}
+
+#quesbut{
+
+  margin-left: 40%;
+
+
+}
+
+#profile_name{
+
+  text-align: left;
+  padding-left: 2%;
+
+}
+
+
+.thead-dark{
+    background-color: black;
+}
+#button{
+    color:#808080
+}
+#topic{
+    color:white
+}
+
+h3{
+  padding-left:2%;
+  color:black;
+  text-decoration: underline;
+}
+
+h4{
+  margin-left: 2%;
+  font-family: monospace;
+  color: black;
+}

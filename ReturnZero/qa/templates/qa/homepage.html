@@ -1,0 +1,23 @@
+{% extends "./base.html" %} {% block bodyblock %}
+<h2>Here are some of the Recent Questions</h2>
+{% if user.is_authenticated %}
+<form method="post">
+  {% csrf_token %}
+  <label for="question">Ask a Question</label>
+  <input type="text" name="question" />
+  <button type="submit">Ask</button>
+</form>
+{% endif %}
+<br />
+<div class="questions-container">
+  {% for question in questions %}
+  <a href="qa/details/{{question.id}}"
+    ><button id="quesbut" type="button">
+      <h3>{{ question.question_name }}</h3>
+    </button></a
+  >
+  <br />
+  <br />
+  {% endfor %}
+</div>
+{% endblock %}
