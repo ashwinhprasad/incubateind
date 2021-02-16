@@ -1,11 +1,13 @@
-{% extends "./base.html" %}
-  {% block bodyblock %}
+{% extends "./base.html" %} {% block bodyblock %}
+<div class="profile-container">
   <h1>User Profile</h1>
-    <h2 id="profile_name">{{ profile.name }}</h2>
-    {% if questions %}
-      <h3>Asked Questions</h3>
-      {% for question in  questions.all %}
-        <a href="/qa/details/{{question.id}}"><h4>{{ question.question_name }}</h4></a>
-      {% endfor %}
-    {% endif %}
-  {% endblock %}
+  <h2 id="profile_name">{{ profile.name }}</h2>
+  {% if questions %}
+  <h3>Asked Questions</h3>
+  {% for question in questions.all %}
+  <a href="/qa/details/{{question.id}}"
+    ><h4>{{ question.question_name }}</h4></a
+  >
+  {% endfor %} {% endif %}
+</div>
+{% endblock %}

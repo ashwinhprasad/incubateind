@@ -1,62 +1,66 @@
 body {
-    background-color: gainsboro !important;
-  }
+  background-color: gainsboro !important;
+}
 
-
-#question{
-
+#question {
   text-align: center;
-  color:black;
+  color: black;
   text-shadow: 1px 2px black;
-
 }
 
-#author{
-
+#author {
   margin-left: 64%;
-  top:14%;
-
+  top: 14%;
 }
 
-h2{
+h2 {
   text-align: center;
   font-family: fantasy;
   text-shadow: 0.5px 1px blue;
 }
 
-#quesbut{
-
-  margin-left: 40%;
-
-
+#quesbut {
 }
 
-#profile_name{
-
+#profile_name {
   text-align: left;
   padding-left: 2%;
-
 }
 
+.thead-dark {
+  background-color: black;
+}
+#button {
+  color: #808080;
+}
+#topic {
+  color: white;
+}
 
-.thead-dark{
-    background-color: black;
-}
-#button{
-    color:#808080
-}
-#topic{
-    color:white
-}
-
-h3{
-  padding-left:2%;
-  color:black;
+h3 {
+  padding-left: 2%;
+  color: black;
   text-decoration: underline;
 }
 
-h4{
+h4 {
   margin-left: 2%;
   font-family: monospace;
   color: black;
+}
+
+.questions-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(105, 105, 105);
+  padding: 1em 1em 1em 1em;
+  margin: 1em auto auto auto;
+  width: 40em;
+}
+
+.profile-container {
+  margin: 1em auto auto auto;
+  width: 70em;
+  background-color: rgb(255, 255, 255);
+  padding: 2em;
 }
