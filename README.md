@@ -1,5 +1,3 @@
-# Techathon -  Stack Overflow 
+# Incubate Hackathon
 
-This project is a clone for stack overflow.
-
-techstack : django, python, html, css
+Topic : Education
