@@ -20,6 +20,9 @@ h2 {
 }
 
 #quesbut {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #profile_name {
